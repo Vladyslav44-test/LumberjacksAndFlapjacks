@@ -8,7 +8,7 @@ namespace LumberjacksAndFlapjacks
     {
         private Stack<Flapjack> flapjackStack = new Stack<Flapjack>();
 
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
         public void TakeFlapjack(Flapjack flapjack)
         {
@@ -16,8 +16,9 @@ namespace LumberjacksAndFlapjacks
         }
         public void EatFlapjacks()
         {
-            Console.WriteLine(Name + "is eating flapjacks");
-            for (int i = 0; i < flapjackStack.Count; i++)
+            Console.WriteLine(Name + " is eating flapjacks");
+            int flapjacksNumber = flapjackStack.Count();
+            for (int i = 0; i < flapjacksNumber; i++)
             {
                 Console.WriteLine($"{Name} ate a {flapjackStack.Pop()} flapjack");
             }
